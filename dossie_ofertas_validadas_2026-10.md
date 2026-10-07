@@ -5,7 +5,7 @@
 - **Total de Ofertas Únicas Catalogadas:** 2
 - **Índice de Sobrevivência (>=45 dias):** 100.0% (Meta: 100%)
 - **Completude do Funil (Copy + LP + Ticket):** 100.0% (Meta: >=80%)
-- **Tempo de Processamento:** 22.0 segundos
+- **Tempo de Processamento:** 20.7 segundos
 - **Custo de API de IA:** R$ 0,00
 
 > ⚠️ **AVISO PARA A IA ANALISADORA (SALVAGUARDA EPISTÊMICA):**
