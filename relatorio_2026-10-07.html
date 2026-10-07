@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConcursoRadar — Dossiê de Ofertas (2026-10-07)</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #22c55e;
+            --border: #334155;
+            --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font);
+            line-height: 1.6;
+            padding: 24px 16px;
+        }
+        .container { max-width: 1080px; margin: 0 auto; }
+        header {
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 { font-size: 26px; color: var(--primary); margin-bottom: 8px; }
+        .subtitle { color: var(--text-muted); font-size: 14px; }
+        
+        .kpis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .kpi-card {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .kpi-num { font-size: 24px; font-weight: bold; color: var(--accent); }
+        .kpi-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px; }
+
+        .safeguard-box {
+            background: #1e1b4b;
+            border-left: 4px solid #818cf8;
+            padding: 14px 16px;
+            border-radius: 6px;
+            margin-bottom: 28px;
+            font-size: 13px;
+        }
+        .safeguard-title { font-weight: bold; color: #a5b4fc; margin-bottom: 4px; display: block; }
+
+        .cards-list { display: flex; flex-direction: column; gap: 24px; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 12px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 14px;
+        }
+        .offer-id { font-size: 11px; text-transform: uppercase; color: var(--primary); font-weight: bold; }
+        .card-header h3 { font-size: 18px; margin-top: 2px; }
+        .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+        .badge-dias { background: #dc2626; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+        .badge-nicho { background: #3b82f6; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px; }
+        .badge-funil { background: #8b5cf6; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px; }
+
+        .card-pricing {
+            display: flex;
+            gap: 20px;
+            background: rgba(0,0,0,0.2);
+            padding: 10px 14px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+        }
+        .price-label { display: block; font-size: 11px; color: var(--text-muted); }
+        .price-val { font-size: 18px; font-weight: bold; color: var(--accent); }
+        .platform-val { font-size: 16px; font-weight: 500; color: #38bdf8; text-transform: capitalize; }
+
+        .bumps-box {
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px dashed rgba(34, 197, 94, 0.3);
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+            font-size: 13px;
+        }
+        .bumps-box ul { margin-left: 20px; margin-top: 4px; }
+        .badge-bump { color: var(--accent); font-weight: bold; }
+
+        .section-block { margin-bottom: 14px; }
+        .section-block h4 { font-size: 13px; text-transform: uppercase; color: var(--primary); margin-bottom: 6px; }
+        .copy-text { background: #0f172a; padding: 12px; border-radius: 6px; font-size: 13px; white-space: pre-line; color: #cbd5e1; max-height: 180px; overflow-y: auto; }
+        .headline-text { font-size: 15px; font-weight: 500; color: #f1f5f9; font-style: italic; }
+        
+        .links-row { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+        .btn-link { background: #2563eb; color: white; text-decoration: none; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; }
+        .btn-link-sec { background: #334155; color: white; text-decoration: none; padding: 6px 12px; border-radius: 6px; font-size: 13px; }
+        
+        .tags-container { display: flex; gap: 6px; flex-wrap: wrap; }
+        .tag { background: #1e3a8a; color: #93c5fd; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+        .text-muted { color: var(--text-muted); font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 ConcursoRadar — Dossiê de Ofertas Validadas</h1>
+            <p class="subtitle">Monitoramento de Longevidade na Meta Ad Library | Data: 2026-10-07 | Palavra-chave: <strong>lei seca esquematizada</strong></p>
+        </header>
+
+        <div class="kpis-grid">
+            <div class="kpi-card">
+                <div class="kpi-num">2</div>
+                <div class="kpi-label">Ofertas Catalogadas</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-num">100.0%</div>
+                <div class="kpi-label">Sobrevivência (>=45d)</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-num">100.0%</div>
+                <div class="kpi-label">Completude do Funil</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-num">22.0s</div>
+                <div class="kpi-label">Tempo de Coleta</div>
+            </div>
+        </div>
+
+        <div class="safeguard-box">
+            <span class="safeguard-title">⚠️ Salvaguarda Epistêmica para Análise de IA e Estratégia</span>
+            As classificações de <em>nicho</em> e <em>funil</em> exibidas nos cards são heurísticas preliminares baseadas em padrões de código/regex. Elas servem para triagem rápida, mas não substituem a análise semântica crítica e profunda do modelo de negócios da oferta.
+        </div>
+
+        <div class="cards-list">
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <span class="offer-id">Oferta #001</span>
+                        <h3>Dedicação Delta</h3>
+                    </div>
+                    <div class="badges">
+                        <span class="badge-dias">🔥 57 dias ativo</span>
+                        <span class="badge-nicho">Tribunais (Poder Judiciário)</span>
+                        <span class="badge-funil">Venda Direta (Checkout)</span>
+                    </div>
+                </div>
+
+                <div class="card-pricing">
+                    <div class="price-box">
+                        <span class="price-label">Ticket Principal</span>
+                        <span class="price-val">R$ 309,96</span>
+                    </div>
+                    <div class="platform-box">
+                        <span class="price-label">Plataforma</span>
+                        <span class="platform-val">hotmart</span>
+                    </div>
+                </div>
+                <div class='bumps-box'><strong>Order Bumps:</strong><ul><li><strong>O ESSENCIAL PARA DELEGADO - VIDEOAULAS O Dedicação</strong>: <span class='badge-bump'>R$ 646,50</span></li></ul></div>
+
+                <div class="section-block">
+                    <h4>📢 Copy do Anúncio (Gancho de Entrada)</h4>
+                    <p class="copy-text">O concurso de Delegado Federal não é para quem estuda sem método.
+É para quem executa com estratégia.
+A Preparação Extensiva Delegado Federal foi atualizada e entrega:
+✔ Cronograma com metas diárias
+✔ E-books semanais direcionados
+✔ Questões comentadas alinhadas ao tema estudado
+✔ Lei seca esquematizada
+✔ Revisão de informativos
+✔ Ciclos inteligentes de revisão
+✔ Treinamento para prova discursiva
+✔ Videoaulas objetivas
+✔ Central exclusiva de dúvidas
+Você não precisa apenas estudar. Precisa evoluir de forma estruturada.
+Delegado Federal exige preparação de elite.
+Garanta sua vaga!
+0:00 / 0:54
+DEDICACAODELTA.COM.BR</p>
+                </div>
+
+                <div class="section-block">
+                    <h4>🎯 Landing Page: Headline & Promessa</h4>
+                    <p class="headline-text">"PREPARAÇÃO EXTENSIVA DELEGADO FEDERAL"</p>
+                    <div class="links-row">
+                        <a href="https://dedicacaodelta.com.br/preparacao-extensiva-delegado-federal/" target="_blank" class="btn-link">🔗 Acessar Landing Page</a>
+                        <a href="https://www.facebook.com/ads/library/?id=2156688438392594" target="_blank" class="btn-link-sec">🔍 Ver na Meta Ad Library</a>
+                    </div>
+                </div>
+
+                <div class="section-block">
+                    <h4>📦 Entregáveis / Formato</h4>
+                    <div class="tags-container"><span class='tag'>Cronograma</span><span class='tag'>Cronogramas</span><span class='tag'>Lei Seca Esquematizada</span><span class='tag'>Pdf</span><span class='tag'>Simulado</span><span class='tag'>Simulados</span></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <span class="offer-id">Oferta #002</span>
+                        <h3>Vibe Federal</h3>
+                    </div>
+                    <div class="badges">
+                        <span class="badge-dias">🔥 47 dias ativo</span>
+                        <span class="badge-nicho">Tribunais (Poder Judiciário)</span>
+                        <span class="badge-funil">Misto / Não Determinado</span>
+                    </div>
+                </div>
+
+                <div class="card-pricing">
+                    <div class="price-box">
+                        <span class="price-label">Ticket Principal</span>
+                        <span class="price-val">R$ 250</span>
+                    </div>
+                    <div class="platform-box">
+                        <span class="price-label">Plataforma</span>
+                        <span class="platform-val">Não detectada</span>
+                    </div>
+                </div>
+                
+
+                <div class="section-block">
+                    <h4>📢 Copy do Anúncio (Gancho de Entrada)</h4>
+                    <p class="copy-text">O edital do IFPI está aberto. E aí, já sabe por onde começar a legislação?
+Se a resposta for &quot;vou juntando PDF e vídeo do YouTube&quot;, você vai gastar mais tempo montando material do que estudando.
+A Trilha Legal – IFPI TAE entrega toda a legislação do edital em mapas mentais e esquemas visuais. Nada de lei seca, nada de caçar material solto. Já vem organizado, ilustrado e fiel ao que a banca pediu.
+Você não precisa produzir nada. Só estudar.
+Toca no link pra conhecer o material por dentro. 👀
+0:00 / 0:38
+VIBEFEDERAL.COM.BR/IFPI/
+A legislação do IFPI toda esquematizada
+Você só abre e estuda</p>
+                </div>
+
+                <div class="section-block">
+                    <h4>🎯 Landing Page: Headline & Promessa</h4>
+                    <p class="headline-text">"Domine a LegislaÃ§Ã£o do IFPI com mapas mentais prontos pra vocÃª estudar,mesmo comeÃ§ando do zero."</p>
+                    <div class="links-row">
+                        <a href="https://vibefederal.com.br/ifpi/?utm_source=fb&amp;utm_medium=paid&amp;utm_campaign=ifpi-tae&amp;utm_term=ifpi-tae&amp;utm_content=ad-2" target="_blank" class="btn-link">🔗 Acessar Landing Page</a>
+                        <a href="https://www.facebook.com/ads/library/?id=1043569178573019" target="_blank" class="btn-link-sec">🔍 Ver na Meta Ad Library</a>
+                    </div>
+                </div>
+
+                <div class="section-block">
+                    <h4>📦 Entregáveis / Formato</h4>
+                    <div class="tags-container"><span class='tag'>Mapas Mentais</span><span class='tag'>Pdf</span></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
